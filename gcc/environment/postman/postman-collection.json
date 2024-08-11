@@ -1,0 +1,148 @@
+{
+  "info": {
+    "_postman_id": "d1234567-89ab-4cde-f012-3456789abcdef",
+    "name": "Appointment API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Appointment",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"serviceName\": \"Consultation\", \"providerName\": \"Dr. Smith\", \"clientName\": \"John Doe\", \"location\": \"Room 101\", \"dateTime\": \"2024-07-20T10:00:00\", \"status\": \"upcoming\", \"notes\": \"Initial consultation\", \"userId\": 1}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/appointments",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "appointments"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Appointments",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/appointments",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "appointments"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Appointment by ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/appointments/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "appointments",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Appointments by User ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/appointments/user/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "appointments",
+            "user",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Appointment",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"serviceName\": \"Follow-up\", \"providerName\": \"Dr. Smith\", \"clientName\": \"John Doe\", \"location\": \"Room 102\", \"dateTime\": \"2024-07-21T10:00:00\", \"status\": \"upcoming\", \"notes\": \"Follow-up consultation\", \"userId\": 1}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/appointments/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "appointments",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Appointment",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:8080/api/appointments/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "appointments",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

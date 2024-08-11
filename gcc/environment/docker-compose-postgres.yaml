@@ -1,0 +1,12 @@
+
+services:
+  db:
+    image: postgres
+    hostname: localhost
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: myapp
+    restart: unless-stopped

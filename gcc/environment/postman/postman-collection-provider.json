@@ -1,0 +1,88 @@
+{
+  "info": {
+    "name": "Provider API",
+    "_postman_id": "12345-abcde-67890-fghij",
+    "description": "Collection for Provider API endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Add Provider Type",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"typeName\": \"General Practitioner\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/providers/types",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "providers", "types"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add Provider",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"providerName\": \"Dr. Smith\",\n    \"providerType\": {\n        \"typeId\": 1\n    }\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/providers",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "providers"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Provider Types",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/providers/types",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "providers", "types"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Providers",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/providers",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "providers"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
